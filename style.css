@@ -203,3 +203,30 @@ html,body{overflow-x:clip;-webkit-text-size-adjust:100%}
 .document-trigger,.organization-trigger{min-height:44px;padding-top:11px;padding-bottom:11px}
 .review-arrow{min-width:44px}
 }
+
+/* Mobile pass 2: carousel, reviews, HSK row, legibility */
+#rates{overflow-x:clip}
+@media(max-width:700px){
+.school-caption{font-size:9px}
+.header-cta{font-size:13px}
+.rate-carousel{padding:0}
+.rates-heading{margin-bottom:28px}
+.rate-carousel .rate-card{left:6%;width:88%;top:30px}
+.rate-carousel .rate-card:not(.carousel-center){opacity:0!important;pointer-events:none}
+.rate-carousel .rate-card{transition:opacity .3s ease}
+.rate-carousel .rate-navigation{display:flex;align-items:center;justify-content:center;gap:28px;padding:4px 0 0}
+.rate-carousel .rate-navigation button{position:static;transform:none;width:48px;height:48px;padding:0;border:1px solid #e9b8c960;border-radius:50%}
+.rate-carousel .rate-navigation button:hover{transform:none}
+.rate-carousel .rate-navigation button svg{width:16px;height:22px}
+.rate-carousel #rate-position{margin:0;min-width:3em}
+.review-gallery{padding:0 40px}
+.review-track{padding:16px 0;min-height:0}
+.review-card{max-width:100%!important}
+.review-card.review-active{transform:none}
+.hsk-band{padding-left:10px;padding-right:10px}
+.hsk-band>div{display:flex;flex-wrap:nowrap;gap:0;justify-content:space-between;align-items:center;font-size:clamp(22px,7vw,30px);font-variant-numeric:lining-nums}
+.hsk-band .hsk-level{display:inline-flex;align-items:center;justify-content:center;flex:1 1 0;min-width:34px;min-height:48px;padding:0 2px;white-space:nowrap}
+.hsk-band .hsk-level[data-hsk-level="1"]{flex:0 0 auto;padding-right:6px}
+.education-collapse-button,.education-book-button{min-height:44px}
+.education-bottom-actions{bottom:0!important;padding:10px 14px calc(10px + env(safe-area-inset-bottom))!important;background:rgba(24,18,23,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid #ffffff20}
+}
