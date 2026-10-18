@@ -191,3 +191,15 @@
 #education li:has(> [data-site-text]:empty),#education p:has(> [data-site-text]:empty),#education ul:not(:has(li:not(:has(> [data-site-text]:empty)))){display:none}
 
 .admission-limit{display:block;margin-top:6px;color:#f2a6c9;font-size:13px;font-weight:700}
+
+/* Mobile polish: no sideways scroll, comfortable tap targets, no iOS focus-zoom */
+html,body{overflow-x:clip;-webkit-text-size-adjust:100%}
+@media(max-width:700px){
+#enquiry-form input,#enquiry-form select,#enquiry-form textarea{font-size:16px;min-height:44px}
+#enquiry-form textarea{min-height:76px;height:auto}
+.header-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+.text-link,.telegram,.education-cta{display:inline-flex;align-items:center;min-height:44px}
+.hsk-band .hsk-level{display:inline-block;min-width:32px;padding:12px 6px;text-align:center}
+.document-trigger,.organization-trigger{min-height:44px;padding-top:11px;padding-bottom:11px}
+.review-arrow{min-width:44px}
+}
