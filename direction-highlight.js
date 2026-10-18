@@ -1,0 +1,2 @@
+const direction=document.querySelector('#enquiry-form select[name="pair"]');
+if(direction){const update=()=>direction.classList.toggle('personal-selected',direction.value==='Личный маршрут');direction.addEventListener('change',update);document.querySelectorAll('[data-plan]').forEach(button=>button.addEventListener('click',()=>queueMicrotask(update)));direction.form.addEventListener('reset',()=>setTimeout(update,0));update();}
